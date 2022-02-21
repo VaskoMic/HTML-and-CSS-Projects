@@ -1,0 +1,134 @@
+html {
+	font-family: verdana;
+	font-size: 20px;
+	
+	}
+	
+body {
+	font-size : 14px;
+	margin : 0;
+	font-family: verdana;
+	line-height: 1.4;
+	color: red;
+	background-color: yellow;
+	}
+foother.
+nav {
+	display: block;
+}
+	
+h1, h2, h3	 {
+	font-family: verdana;
+}
+
+h1,h2, h3{
+	line-height: 30px;
+	font-height: 30px;
+	padding-bottom: 20px;
+	text-align:center;
+}
+.text-center{
+	text-align: center;
+}
+
+p {
+	line-height: 30px;
+	font-height: 30px;
+	padding-bottom : 20 px;
+}
+
+.conteiner {
+border: 10px solid green;
+  background-color: yellow;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;	
+
+	
+}
+
+.wrap   
+{
+	height: 100%;
+	position:relative;
+	top:0;
+	left:0;
+	text-align:	center;
+	overflow:hidden;
+	width: 100%;
+	padding: 10px;
+}
+		
+	
+
+
+.menu-conteiner {
+	border: 10px;
+	background-color: powderblue;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px
+	max-height:10px;
+	margin: auto;
+	z-index:100%;
+	position:fixed;
+	width: 10%;
+}
+
+#home{
+	
+	background-attachment:fixed;
+	padding-bottom:30px;
+	padding-left:30px;
+	
+	
+}
+.head-main{
+	font-variant:small-caps;
+	color: #000;
+	text-align:left;
+	letter-spacing:1px;
+	word-spacing:5px;
+	font-size: 50px;
+	line-height:2px;
+}
+.flex-conteiner{
+display: flex;
+padding: 2px;
+border-radius: 1px;
+flex-wrap:flex;
+margin:2px auto;
+background-color: blue;	
+box-shadow: 10px 10px 5px 5px;
+}
+
+
+.reservations{
+	width:70%;
+	padding:40px;
+	border-radius:0px;
+	margin:0px auto;
+	background-color: powderblue;
+	box-shadow: 1px 2px 5px 0;
+}
+
+.reservations h3{
+	width:80%;
+	text-align:center;
+	
+}
+.reservations form{
+font-size:10px;
+font-weight:600;
+margin:0px auto;
+background-color:grey;
+}	
+.terms{
+	float:right;
+	display:inline;
+	position:relative:
+	color: #000;
+	padding-left:50px;
+}

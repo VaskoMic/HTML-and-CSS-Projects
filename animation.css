@@ -1,0 +1,48 @@
+.menu{
+	color: red;
+	text-align: left;
+	display: center;
+}
+.menu li {
+	color: #000;
+	transition-property:background;
+	transition-delay: .5s;
+}
+.photo{
+	position:relative;
+	padding:1px;
+	border-radius:8px;
+	margin-bottom: 2px;
+}
+
+.photo-conteiner{
+	text-align:center;
+	height:200px;
+	width:400px;
+	padding: 30px;
+
+}
+
+.photo-overlay {
+	color: orange;
+	position: absolute;
+	padding-left:20px;
+	padding-right:20px;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	
+}
+.photo img{
+	transition: transfrom .5s;
+	transition-origin: 50% 50%
+	z-index=-1;
+}
+.photo-overlay{
+	capacity:0;
+	transition: opacity .5s;
+	border-radius: 10px;
+}
+	
+	
