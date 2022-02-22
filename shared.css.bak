@@ -67,7 +67,7 @@ border: 10px solid green;
 	
 	background-color: white;
 	position:fixed;
-	padding: 20px;
+	padding: 50px;
 }
 
 #home{
