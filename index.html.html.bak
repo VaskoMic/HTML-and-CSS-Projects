@@ -10,11 +10,11 @@
 	
 	<!----NAV---->
 	<div class="wrap">
-		<div class="menu-conteiner">
+		<div class="menu-container">
 			<ul class="menu">
-			<a href="#home"><li>HOME</li></a>
-			<a href="#galerry"><li>GALERRY</li></a>
-			<a href="#contacts"><li>RESERVATIONS</li></a>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#galerry">GALERRY</a></li>
+			<li><a href="#reservation">RESERVATIONS</a></li>
 			</ul>
 		</div>
 	</div>
@@ -24,14 +24,9 @@
 	<!----HOME---->
 	<div>
 		<div id="home">
-			<div class="conteiner">
+			<div class="container">
 				<div class="text-center">
-				<h2><span class="head-main">MOST BEAUTIFUL PLACES</span></h2>
-					
-					<div class="photo1">
-					<img src="headpisture.jpg.jpg" alt="" weight="350" height="350" >
-					</div>
-					
+				<h2><span class="head-main">MOST BEAUTIFUL PLACES</span></h2>					
 				</div>
 			</div>
 		</div>
@@ -41,15 +36,15 @@
 	<!----GALLERY---->
 	<div>
 		<section id="galerry">
-			<div class="conteiner">
+			<div class="container">
 				<h1>Galerry</h1>
-				<div class="flex-conteiner">
+				<div class="flex-container">
 				
 			<!------PHOTO CONTEINER------------>
-				<div class="photo-conteiner">
+				<div class="photo-container">
 					<div class="photo">
 					
-					<img src="Thumbnail1.jpg" alt="" weight="150" height="130">
+					<img src="Thumbnail1.jpg" alt="" weight="150" height="130" >
 						<div class="photo-overlay">
 						<h3>Click to Enlarge</h3>
 						<p>View our offers and book your place</p>
@@ -59,10 +54,9 @@
 			<!-----END PHOTO CONTEINER------->
 			
 			<!------PHOTO CONTEINER------------>
-				<div class="photo-conteiner">
+				<div class="photo-container">
 					<div class="photo">
-					
-					<img src="Thumbnail2.jpg" alt="" weight="150" height="140">
+					<img src="Thumbnail2.jpg" alt="" weight="150" height="130">
 						<div class="photo-overlay">
 						<h3>Click to Enlarge</h3>
 						<p>View our offers and book your place</p>
@@ -72,10 +66,75 @@
 			<!-----END PHOTO CONTEINER------->
 			
 			<!------PHOTO CONTEINER------------>
-				<div class="photo-conteiner">
+				<div class="photo-container">
 					<div class="photo">
 					
-					<img src="Thumbnail3.jpg" alt="" weight="150" height="140">
+					<img src="Thumbnail3.jpg" alt="" weight="150" height="130">
+						<div class="photo-overlay">
+						<h3>Click to Enlarge</h3>
+						<p>View our offers and book your place</p>
+						</div>
+					</div>
+				</div>
+			<!-----END PHOTO CONTEINER------->
+			
+			<!------PHOTO CONTEINER------------>
+				<div class="photo-container">
+					<div class="photo">
+					
+					<img src="Thumbnail4.jpg" alt="" weight="150" height="130">
+						<div class="photo-overlay">
+						<h3>Click to Enlarge</h3>
+						<p>View our offers and book your place</p>
+						</div>
+					</div>
+				</div>
+			<!-----END PHOTO CONTEINER------->
+			
+			<!------PHOTO CONTEINER------------>
+				<div class="photo-container">
+					<div class="photo">
+					
+					<img src="Thumbnail5.jpg" alt="" weight="150" height="130">
+						<div class="photo-overlay">
+						<h3>Click to Enlarge</h3>
+						<p>View our offers and book your place</p>
+						</div>
+					</div>
+				</div>
+			<!-----END PHOTO CONTEINER------->
+			
+			<!------PHOTO CONTEINER------------>
+				<div class="photo-container">
+					<div class="photo">
+					
+					<img src="Thumbnail6.jpg" alt="" weight="150" height="130">
+						<div class="photo-overlay">
+						<h3>Click to Enlarge</h3>
+						<p>View our offers and book your place</p>
+						</div>
+					</div>
+				</div>
+			<!-----END PHOTO CONTEINER------->
+			
+			<!------PHOTO CONTEINER------------>
+				<div class="photo-container">
+					<div class="photo">
+					
+					<img src="Thumbnail7.jpg" alt="" weight="150" height="130">
+						<div class="photo-overlay">
+						<h3>Click to Enlarge</h3>
+						<p>View our offers and book your place</p>
+						</div>
+					</div>
+				</div>
+			<!-----END PHOTO CONTEINER------->
+			
+			<!------PHOTO CONTEINER------------>
+				<div class="photo-container">
+					<div class="photo">
+					
+					<img src="Thumbnail8.jpg" alt="" weight="150" height="130">
 						<div class="photo-overlay">
 						<h3>Click to Enlarge</h3>
 						<p>View our offers and book your place</p>
@@ -92,12 +151,12 @@
 	
 	<!----RESERVATIONS---->
 	
-	<section id="contacts">
-		<div class="conteiner">
+	<section id="contact">
+		<div class="container">
 			<div class="heading-padding">
-				<h2 class="heading-padding">Reservations</h2>
-				<div class="reservations">
-					<h3><span>Your adventure can start here</span></h3>
+				<h1 class="heading-padding">Reservations</h1>
+				<div class="reservation">
+					<h2><span>Your adventure can start here</span></h2>
 					<div class="form">
 					<form action="" metod="post">
 					<label for="fname">Full name:</label><br>
