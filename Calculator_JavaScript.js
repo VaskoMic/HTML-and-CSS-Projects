@@ -8,13 +8,13 @@ const Calculator = {
     //this checks whether or not th second operand has been input
     Wait_Second_Operand: false,
     //this will hold the operator, we set it to null for now
-    operator: null 
+    operator: null,
 
-}
+};
 
 //this modifies values each time a button is clicked
-function Input_Digit(digit) {
-    const { Display_Value, Wait_Second_Operand } = calculator ;
+    function Input_Digit(digit) {
+    const { Display_Value, Wait_Second_Operand } = Calculator ;
     //we are checking to see if Wait_Second_Operand is true and set
     //Display_Value to the key that was clicked.
     if (Wait_Second_Operand === true) {
@@ -26,11 +26,11 @@ function Input_Digit(digit) {
         Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
-//this secton handles decimal points
-function Input_Decimal(dot) {
+    //this secton handles decimal points
+    function Input_Decimal(dot) {
     //this ensures that accidental clicking of the decimal point
     //doesn't cause bugs in your operation
-    if ( Calculator.Wait_Second_Operand === true) return;
+    if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
         //we are saying that if the Display_Value does not contain a decimal point
         //we want to add a decimal point
@@ -38,7 +38,7 @@ function Input_Decimal(dot) {
     }
 }
 //this section handles operators
-function Handle_Operator(Next_Operators){
+function Handle_Operator(Next_Operator){
     const { First_Operand, Display_Value, operator} = Calculator
     //when an operator key is pressed, we convert the current number
     //displayed on the screen to a number and then store the result in
@@ -50,6 +50,22 @@ function Handle_Operator(Next_Operators){
         Calculator.operator = Next_Operator;
         return;
     }
+        if (First_Operand == null) {
+            Calculator.First_Operand = Value_of_Input;
+        } else if (operator) {// checks if an operator already exists
+            const Value_Now = First_Operand || 0;
+            //if operator exists, property lookup is perfomed for the operator
+            //in the Perform Calculation object and the function that matches the
+            //operator is executed
+            let result = Perfom_Calculation[operator] (Value_Now, Value_of_Input);
+            //here we add a fixed amount of numbers after the decimal
+            result = Number(result).toFixed(9)
+            //this will remove any traling 0's
+            result = (result * 1).toStraing()
+            Calculator.Display_Value = parseFloat(result);
+            Calculator.First_Operand = parseFloat(result);
+
+        }
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
@@ -61,7 +77,7 @@ const Perform_Calculation = {
 
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
 
-    '_': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
 
     '=': (First_Operand, Second_Operand) => Second_Operand,
 } ;
@@ -71,14 +87,18 @@ const Perform_Calculation = {
         Calculator.Wait_Second_Operand = false;
         Calculator.operator = null;
 }
-
-Update_Display() ;
-// this section  monitors button cliks
-const keys = document.guerySelector ('.calculator-keys');
-keys.addEventListener ('click', ( Event) => {
+  //this function updates the screen with the contents of Display_Value
+  function Update_Display() {
+      const display = document.querySelector('.calculator-screen');
+      display.value = Calculator.Display_Value;
+  }
+    Update_Display() ;
+    // this section  monitors button cliks
+    const keys = document.guerySelector ('.calculator-keys');
+    keys.addEventListener ('click', ( event) => {
     //the target variable is an object that represents the element
     //that was clicked
-    const { target} = Event ;
+    const { target} = event ;
     //if the element that was clicked on is not a button, exit the function
     if (!target.matches('button') ){
         return;
