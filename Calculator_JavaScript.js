@@ -6,9 +6,9 @@ const Calculator = {
     //This will hold the first operand for any expressions, we set it to null for now
     First_Operand: null,
     //this checks whether or not th second operand has been input
-    Wait_Second_Operand; false,
+    Wait_Second_Operand: false,
     //this will hold the operator, we set it to null for now
-    operator; null;
+    operator: null 
 
 }
 
@@ -61,7 +61,7 @@ const Perform_Calculation = {
 
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
 
-    '_': (First_Operand, Second_Operand) => First_Operand _ Second_Operand,
+    '_': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
 
     '=': (First_Operand, Second_Operand) => Second_Operand,
 } ;
@@ -75,7 +75,7 @@ const Perform_Calculation = {
 Update_Display() ;
 // this section  monitors button cliks
 const keys = document.guerySelector ('.calculator-keys');
-keys.addEventListener ('click', (Event)) => {
+keys.addEventListener ('click', ( Event) => {
     //the target variable is an object that represents the element
     //that was clicked
     const { target} = Event ;
@@ -88,7 +88,7 @@ keys.addEventListener ('click', (Event)) => {
      Update_Display();
      return;
  }
-    if (target.classList.contains)('decimal')) {
+    if (target.classList.contains('decimal')) {
     Input_Decimal(target.value);
     Update_Display();
     return;
@@ -101,4 +101,4 @@ keys.addEventListener ('click', (Event)) => {
     }
     Input_Digit(target.value);
     Update_Display();
-}
+})
