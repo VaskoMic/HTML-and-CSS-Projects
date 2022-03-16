@@ -57,11 +57,11 @@ function Handle_Operator(Next_Operator){
             //if operator exists, property lookup is perfomed for the operator
             //in the Perform Calculation object and the function that matches the
             //operator is executed
-            let result = Perfom_Calculation[operator] (Value_Now, Value_of_Input);
+            let result = Perform_Calculation[operator] (Value_Now, Value_of_Input);
             //here we add a fixed amount of numbers after the decimal
             result = Number(result).toFixed(9)
             //this will remove any traling 0's
-            result = (result * 1).toStraing()
+            result = (result * 1).toString()
             Calculator.Display_Value = parseFloat(result);
             Calculator.First_Operand = parseFloat(result);
 
@@ -94,7 +94,7 @@ const Perform_Calculation = {
   }
     Update_Display() ;
     // this section  monitors button cliks
-    const keys = document.guerySelector ('.calculator-keys');
+    const keys = document.querySelector ('.calculator-keys');
     keys.addEventListener ('click', ( event) => {
     //the target variable is an object that represents the element
     //that was clicked
