@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<body>
+
 	
 		<h1 style="font-size:60;"">Nature Health Advice</h1>
 			<p>Let us help you with health advice</p>
+			<link rel="stylesheet" href="one_page_website1.css">
+
 			<style>
 					body {background-color: powderblue;}
 					h1 {color: red;}
@@ -22,12 +25,47 @@
 		<!==Photo image==>
 		<div id="Gallery">
 		<h1>Gallery</h1>
-			<div>
-				<div>
-					<img src=Thumbnail1.jpeg alt="Click" width="300" height="200"">
+					<div class="row">
+						<div class="column">
+						  <img src="Thumbnail1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
+						 width="300" height="200">
+						</div>
+					</div>
+		</div>
+		<div id="Gallery">
+						<div class="row">
+							<div class="column">
+							  <img src="Thumbnail2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
+							 width="300" height="200">
+							</div>
+						</div>
+			</div>
+			<div class="row">
+				<div class="column">
+				  <img src="Thumbnail3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+				   width="300" height="200">
 				</div>
 			</div>
-		</div>
+			<div id="myModal" class="modal">
+  				<span class="close cursor" onclick="closeModal()">&times;</span>
+  					<div class="modal-content">
+
+    				<div class="mySlides">
+      					<div class="numbertext">1 / 3</div>
+     					 <img src="Thumbnail1.jpg" style="width:100%">
+    					</div>
+
+    					<div class="mySlides">
+     					 <div class="numbertext">2 / 3</div>
+     					 <img src="Thumbnail2.jpg" style="width:100%">
+    					</div>
+
+    					<div class="mySlides">
+      					<div class="numbertext">3 / 3</div>
+     					 <img src="Thumbnail3.jpg" style="width:100%">
+   					 </div>
+					</div>
+			</div>
 		<!==Video==>
 		<div id="Gallery">
 		<h1>Video advise</h1>
@@ -37,9 +75,88 @@
 				</div>
 			</div>
 			
+
+			<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 4</div>
+		<img src="Thumbnail3.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 4</div>
+		<img src="Thumbnail3.jpg" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 4</div>
+		<img src="Thumbnail3.jpg" style="width:100%">
+	  </div>
+
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="Thumbnail1.jpg" onclick="currentSlide(1)">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="Thumbnail3.jpg" onclick="currentSlide(2)">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="Thumbnail3.jpg" onclick="currentSlide(3)">
+	  </div>
+	</div>
+	<script>
+		function openModal() {
+		  document.getElementById("myModal").style.display = "block";
+		}
+		function closeModal() {
+ 		 document.getElementById("myModal").style.display = "none";
+		}
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+		</script>
 		<footer>
 			<details>
-				<summary>Contact us</summary>
+					<summary>Contact us</summary>
 					<p>telephone number ++44 345876000</p>
 					<p>mail : natureadvice@outlook.com</p>
 			</details>
